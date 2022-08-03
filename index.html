@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElYte-Penetestors</title>
+  <!-- <link rel="stylesheet" href="style/nav-style.css" />
+  <link rel="stylesheet" href="style/main-style.css" />
+  <link rel="stylesheet" href="style/content-style.css" />
+  <link rel="stylesheet" href="style/footer.css" /> -->
+
+  <style>
+    .content {
+      position: relative;
+      width: auto;
+      height: auto;
+    }
+
+    .mini-text-top {
+      color: #12d60b;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 0.1em;
+      font-family: "Rubik", sans-serif;
+      text-align: center;
+      padding: 55px 0 25px 0;
+      background-image: linear-gradient(315deg, #f8ef42 0%, #0fd64f 74%);
+    }
+
+    .content .container-1 {
+      /* right: 15px;
+  left: 30px; */
+      position: relative;
+      height: 370px;
+    }
+
+    .content .container-1 .information {
+      padding-right: 40px;
+      padding-left: 40px;
+      height: 80%;
+      width: 56%;
+    }
+
+    .content .container-1 .information .first-heading {
+      font-family: "Rubik", sans-serif;
+      box-sizing: border-box;
+      position: absolute;
+      letter-spacing: 0.15srem;
+      font-weight: bolder;
+      background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+      color: transparent;
+      background-clip: text;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+
+    .content .container-1 .information .first-paragraph {
+      font-family: "Rubik", sans-serif;
+      color: #4c724f;
+      position: absolute;
+      top: 36.5%;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bolder;
+      letter-spacing: 0.1em;
+      line-height: 30px;
+    }
+
+    img {
+      position: relative;
+      max-width: 100%;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    img {
+      border: 0;
+      border-top-color: currentcolor;
+      border-top-style: none;
+      border-top-width: 0px;
+      border-right-color: currentcolor;
+      border-right-style: none;
+      border-right-width: 0px;
+      border-bottom-color: currentcolor;
+      border-bottom-style: none;
+      border-bottom-width: 0px;
+      border-left-color: currentcolor;
+      border-left-style: none;
+      border-left-width: 0px;
+    }
+
+    .terminal {
+      height: 277px;
+      width: 539px;
+      position: absolute;
+      right: 57px;
+      top: 3%;
+    }
+
+    *,
+    ::after,
+    ::before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .content .blogs-btn {
+      top: 96%;
+      position: relative;
+      background-color: transparent;
+      color: #09820b;
+      border: 2px solid #09820b;
+      left: 42%;
+      padding: 15px 30px;
+      box-shadow: 0 0 40px 40px #081205 inset, 0 0 0 0 #3498db;
+      -webkit-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
+      font-family: "Rubik", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      text-align: center;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      cursor: pointer;
+    }
+
+    .blogs-btn:hover {
+      box-shadow: 0 0 10px 0 #0f7924 inset, 0 0 10px 4px #0f7924;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+    * {
+      font-family: Roboto;
+    }
+
+    .footer-distributed {
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: normal 16px sans-serif;
+      padding: 45px 50px;
+    }
+
+    .footer-distributed .footer-left p {
+      color: #367d33;
+      font-size: 14px;
+      margin: 0;
+      font-family: 'sarpanch', cursive;
+      letter-spacing: 1px;
+    }
+
+    /* Footer links */
+
+    .footer-distributed p.footer-links {
+      font-size: 18px;
+      font-weight: bold;
+      color: #367d22;
+      margin: 0 0 10px;
+      padding: 0;
+      transition: ease 0.25s;
+    }
+
+    .footer-distributed p.footer-links a {
+      display: inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color: inherit;
+      transition: ease 0.25s;
+    }
+
+    .footer-distributed .footer-links a:before {
+      content: "·";
+      font-size: 20px;
+      left: 0;
+      color: #fff;
+      display: inline-block;
+      padding-right: 5px;
+    }
+
+    .footer-distributed .footer-links .link-1:before {
+      content: none;
+    }
+
+    .footer-distributed .footer-right {
+      float: right;
+      margin-top: 6px;
+      max-width: 180px;
+    }
+
+    .footer-distributed .footer-right a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      background-color: #33383b;
+      border-radius: 2px;
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+      margin-left: 3px;
+      transition: all 0.25s;
+    }
+
+    .footer-distributed .footer-right a:hover {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+    }
+
+    .footer-distributed p.footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Media Queries */
+
+    @media (max-width: 600px) {
+
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-right {
+        text-align: center;
+      }
+
+      .footer-distributed .footer-right {
+        float: none;
+        margin: 0 auto 20px;
+      }
+
+      .footer-distributed .footer-left p.footer-links {
+        line-height: 1.8;
+      }
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Sarpanch&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+    @import url('http://fonts.cdnfonts.com/css/samarkan');
+
+    :root {
+      --primary-button-color: #129f14;
+      --second-button-color: #338e05;
+      --light-button-color: #26af28;
+      --bg-color: #121317;
+      --hover-color: #05eeff;
+      /*I didn't used it but its really good color to use for box shadow and inside button color*/
+    }
+
+    body {
+      /* background: #121317; */
+      background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+      height: 1000px;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo {
+      font-family: "Ubuntu", sans-serif;
+      color: #26af28;
+      font-size: larger;
+      float: left;
+    }
+
+    .logo img {
+      position: absolute;
+      left: 15px;
+      top: 27px;
+      width: 270px;
+    }
+
+    .navigation {
+      overflow: hidden;
+      height: 77px;
+    }
+
+    .navigation .search {
+      width: 300px;
+      float: left;
+      margin-left: 27px;
+    }
+
+    .navigation .search .srch {
+      font-family: 'Rubik', sans-serif;
+      width: 200px;
+      height: 40px;
+      background: transparent;
+      border: 1px solid #26af28;
+      margin-top: 20px;
+      color: #26af28;
+      border-right: none;
+      font-size: 16px;
+      float: left;
+      padding: 10px;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      outline: none !important;
+    }
+
+    .navigation .search .btn {
+      width: 100px;
+      height: 40px;
+      background: #26af28;
+      border: 2px solid #26af28;
+      margin-top: 20px;
+      color: #fff;
+      font-size: 15px;
+      border-bottom-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: absolute;
+    }
+
+    .navigation .search .btn:hover {
+      box-shadow: 0 0 50px #26af28;
+    }
+
+    ::placeholder {
+      /* color: #fff; */
+      color: #23881f;
+      font-family: Arial;
+    }
+
+    .navigation ul li {
+      display: inline-block;
+      position: relative;
+    }
+
+    .navigation li {
+      float: right;
+    }
+
+    .navigation ul a {
+      font-family: "Ubuntu", sans-serif;
+      color: #f2f2f2;
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-size: 18px;
+      display: block;
+      background: transparent;
+      margin: 15px 45px 15px;
+    }
+
+    .navigation ul li a:hover {
+      color: var(--light-button-color);
+      transition: all 0.5s ease-out;
+    }
+
+    .navigation ul li a,
+    .navigation ul li a:after,
+    .navigation ul li a:before {
+      transition: all 0.5s;
+    }
+
+    .navigation ul li a:after,
+    .navigation li a:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: ".";
+      color: transparent;
+      background: #26af28;
+      /*color of Underline stroke*/
+      height: 2px;
+    }
+
+    .navigation ul li a:hover:after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navigation">
+    <div class="search">
+      <input class="srch" type="search" name="" placeholder="Search here" />
+      <a href="#"><button class="btn">Search</button></a>
+    </div>
+    <ul>
+      <li><a class="JavaScript" href="JavaScript.html">JavaScript</a></li>
+      <li><a class="Css3" href="CSS3.html">Css3</a></li>
+      <li><a class="Html5" href="Pentesting.html">Pentesting</a></li>
+      <li><a class="Home" href="Home.html">Home</a></li>
+    </ul>
+  </div>
+  <hr style="color: #5ea860; margin: 0" />
+
+  <div class="content">
+    <div class="mini-text-top" style="text-transform: uppercase">
+      <span style="font-weight: bolder; box-shadow: -9px 216px 55px #26af28">ElYte </span>SEC
+    </div>
+
+    <div class="container-1 full-width">
+      <div class="information">
+        <h1 class="first-heading">Be a Penetration-Tester</h1>
+        <div class="custom-html margin-top-10 margin-bottom-10" data-uniqid="1597678752965">
+          <hr style="
+                height: 2px;
+                border-width: 0;
+                color: #37ab49;
+                background-color: #465e4a;
+                position: absolute;
+                width: 47%;
+                top: 87px;
+              " data-uniqid="1597396374526" />
+        </div>
+        <p class="first-paragraph">
+          Seeing Hackers doing hacking in movies and TV series looks really so
+          cool, <br />
+          but you can also do hacking like that in real life. Our website
+          offers you <br />
+          to learn real Ethical Hacking for totally free. as many tutorial's
+          as you <br />
+          want you can learn from here
+        </p>
+        <button class="blogs-btn">Pentesting</button>
+
+        <div class="terminal">
+          <img srcset="
+                https://s3.us-east-1.amazonaws.com/contents.newzenler.com/6016/library/1-min5f3aa214e247d_sm.gif  480w,
+                https://s3.us-east-1.amazonaws.com/contents.newzenler.com/6016/library/1-min5f3aa214e247d_md.gif  640w,
+                https://s3.us-east-1.amazonaws.com/contents.newzenler.com/6016/library/1-min5f3aa214e247d_lg.gif 1280w
+              " sizes="(max-width: 500px) 480px,(max-width: 640px) 640px,(min-width: 640) 1280px"
+            src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/6016/library/1-min5f3aa214e247d_lg.gif"
+            data-uniqid="1597678101554" class="" style="
+                border-radius: 15px;
+                border-style: solid;
+                border-width: 8px;
+                border-color: rgb(238, 238, 238, 0.67);
+              " />
+        </div>
+      </div>
+    </div>
+    <hr style="color: #37ab49;margin-top: 35px;" />
+  </div>
+
+  <!-- <div class="footer"></div> -->
+
+  <div class="footer">
+    <footer class="footer-distributed">
+
+      <div class="footer-right">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+      </div>
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <a class="link-1" href="#">Home</a>
+
+          <a href="#">Blog</a>
+
+          <a href="#">Pricing</a>
+
+          <a href="#">About</a>
+
+          <a href="#">Faq</a>
+
+          <a href="#">Contact</a>
+        </p>
+
+        <p>Created By - Ayush Kumar&copy; 2022</p>
+      </div>
+
+    </footer>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- fontawesome CDN script - i am using temp mail -->
+  <script src="https://use.fontawesome.com/7f5ccd4376.js"></script>
+</body>
+
+</html>
+<!-- loader should be inside the <content> tag and loaded should be inside <body> tag -->
+<!-- <ion-icon name="code-slash-outline"></ion-icon> -->
+<!-- coding-icon -->
+<!-- <ion-icon name="cube-outline"></ion-icon> -->
+<!-- hack-the-box-icon -->
+<!-- <ion-icon name="search-circle"></ion-icon> -->
+<!-- search button -->
